@@ -8,10 +8,10 @@ function tvshowSaveHandler(event) {
     const tvshowName = document.getElementById('tvshowName1').value;
     console.log(tvshowName)
 
-    fetch('/save', {
+    fetch('/api/save', {
         method: 'POST',
         body: JSON.stringify({
-            'tvshowName': tvshowName,
+            'name': tvshowName,
         }),
         headers: {
             'Content-Type': 'application/json',
@@ -30,11 +30,11 @@ function tvshowFindHandler(event) {
 
     const tvshowName = document.getElementById('tvshowName2').value;
 
-    fetch('/find/' + tvshowName).then(response => {
+    fetch('/api/find/' + tvshowName).then(response => {
         response.json().then((res) => {
             const tvshowField = document.getElementById("tvshowDataField3");
             console.log(res);
-            tvshowField.innerHTML = JSON.stringify(res.data);
+            tvshowField.innerHTML = JSON.stringify(res);
         })
     }).catch(err => console.log("Error when /find", err));
 }
