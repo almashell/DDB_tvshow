@@ -19,45 +19,59 @@
   </head>
 
   <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <form id="tvshowSaveForm">
-                    <div class="mb-3">
-                        <label for="tvshowName1" class="form-label">Ввод и сохранение данных о сериале</label>
-                        <input type="text" class="form-control" id="tvshowName1" aria-describedby="tvshowHelp1">
-                        <div id="tvshowHelp1" class="form-text">Введите название сериала для добавления в базу данных</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Добавить</button>
-                </form>
-                <div id="tvshowDataField1">
-                    
-                </div>
-            </div>
-            <div class="col-sm">
-                <form id="tvshowFindForm">
-                    <div class="mb-3">
-                        <label for="tvshowName2" class="form-label">Поиск данных о сериале</label>
-                        <input type="text" class="form-control" id="tvshowName2" aria-describedby="tvshowHelp2">
-                        <div id="tvshowHelp2" class="form-text">Введите название сериала для поиска</div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Найти</button>
-                </form>
-                <div id="tvshowDataField2">
-                    
-                </div>
-            </div>
-            <div class="col-sm">
-                <span>Вывод данных о сериале</span>
-                <div id="tvshowDataField3">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm">
+              <form id="tvshowSaveForm">
+                  <div class="mb-3">
+                      <label for="tvshowName1" class="form-label">Ввод и сохранение данных о сериале</label>
+                      <input type="text" class="form-control" id="tvshowName1" aria-describedby="tvshowHelp1">
+                      <div id="tvshowHelp1" class="form-text">Введите название сериала для добавления в базу данных</div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Добавить</button>
+              </form>
+              <p><p></p>
+              <span>Результат сохранения</span>
+              <p>
+              <div>
+                  <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item flex-fill" style="flex-basis: 200px !important;">Операция</li>
+                      <li id="save-action" class="list-group-item flex-fill" style="flex-basis: 200px !important;">...</li>
+                  </ul>
+                  <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item flex-fill" style="flex-basis: 200px !important;">Статус</li>
+                      <li id="save-status" class="list-group-item flex-fill" style="flex-basis: 200px !important;">...</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-sm">
+              <form id="tvshowFindForm">
+                  <div class="mb-3">
+                      <label for="tvshowName2" class="form-label">Поиск данных о сериале</label>
+                      <input type="text" class="form-control" id="tvshowName2" aria-describedby="tvshowHelp2">
+                      <div id="tvshowHelp2" class="form-text">Введите название сериала для поиска</div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Найти</button>
+              </form>
+              <p><p></p>
+              <span>Вывод данных о сериале</span>
+              <p>
+              <div>
+                  <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item flex-fill" style="flex-basis: 200px !important;">Идентификатор</li>
+                      <li id="find-id" class="list-group-item flex-fill" style="flex-basis: 200px !important;">...</li>
+                  </ul>
+                  <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item flex-fill" style="flex-basis: 200px !important;">Название</li>
+                      <li id="find-name" class="list-group-item flex-fill" style="flex-basis: 200px !important;">...</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 
   </body>
 </html>
