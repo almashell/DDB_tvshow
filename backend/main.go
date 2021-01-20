@@ -29,8 +29,10 @@ func CreateTvshowEndpoint(response http.ResponseWriter, request *http.Request) {
 	_ = json.NewDecoder(request.Body).Decode(&tvshow)
 	collection := client.Database("tvshow").Collection("tvshownames")
 	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
-	result, _ := collection.InsertOne(ctx, tvshow)
-	json.NewEncoder(response).Encode(result)
+	_, _ = collection.InsertOne(ctx, tvshow)
+	fmt.Println(tvshow.Name)
+	response.Write([]byte(`{ "data": "Попытались сохранить сериал ` + tvshow.Name + `","status":200,"error":"" }`))
+	//json.NewEncoder(response).Encode(result)
 }
 
 func GetTvshowEndpoint(response http.ResponseWriter, request *http.Request) {
